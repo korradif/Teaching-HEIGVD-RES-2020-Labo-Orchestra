@@ -105,7 +105,7 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | --- | --- |
 |Question | How can we represent the system in an **architecture diagram**, which gives information both about the Docker containers, the communication protocols and the commands? |
 
-![image](images/Architecture diagram.png) 
+![image](images/ArchitectureDiagram.png) 
 
 | #  | Topic |
 | --- | --- |
