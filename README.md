@@ -104,7 +104,7 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | --- | --- |
 |Question | How can we represent the system in an **architecture diagram**, which gives information both about the Docker containers, the communication protocols and the commands? |
-| | *Insert your diagram here...* |
+| | ![image](images/Architecture diagram.png) |
 |Question | Who is going to **send UDP datagrams** and **when**? |
 | | Musician, continuously as multicast to say it plays sounds on port "x" <br>Musician, continuously as unicast on port "x" where the sounds are |
 |Question | Who is going to **listen for UDP datagrams** and what should happen when a datagram is received? |
@@ -187,15 +187,17 @@ socket.on("listening", function() {
 | #  | Topic |
 | ---  | --- |
 |Question | How can we use the `Map` built-in object introduced in ECMAScript 6 to implement a **dictionary**?  |
-| | 
+| | |
 ```
 var myMap = new Map();
 myMap.set("key", "value");
 myMap.get("key"); //return "value"
 ```
- |
+
+| #  | Topic |
+| --- | --- |
 |Question | How can we use the `Moment.js` npm module to help us with **date manipulations** and formatting?  |
-| | 
+| | |
 ```
 //add days
 moment().add(1, 'days').calendar();  
@@ -204,11 +206,13 @@ moment().subtract(1, 'days').calendar();
 //format
 moment().format('MMMM Do YYYY, h:mm:ss a');
 ```
- |
+
+| #  | Topic |
+| --- | --- |
 |Question | When and how do we **get rid of inactive players**?  |
 | | We get rid of inactive players as soon as they are inactive. To detect that musician are inactive, we compare the timestamps between the saved value and the current time stamp, if it's greater then 5 second, we get rid of the musician |
 |Question | How do I implement a **simple TCP server** in Node.js?  |
-| | using net.Server library
+| | using net.Server library| 
 ```
 var net = require('net');
 var server = net.createServer(function(socket) {
@@ -217,7 +221,7 @@ var server = net.createServer(function(socket) {
 });
 server.listen(1337, '127.0.0.1');
 ```
-|
+
 
 
 ## Task 5: package the "auditor" app in a Docker image
