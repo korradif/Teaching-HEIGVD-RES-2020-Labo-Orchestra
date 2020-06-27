@@ -187,13 +187,37 @@ socket.on("listening", function() {
 | #  | Topic |
 | ---  | --- |
 |Question | How can we use the `Map` built-in object introduced in ECMAScript 6 to implement a **dictionary**?  |
-| | *Enter your response here...* |
+| | 
+```
+var myMap = new Map();
+myMap.set("key", "value");
+myMap.get("key"); //return "value"
+```
+ |
 |Question | How can we use the `Moment.js` npm module to help us with **date manipulations** and formatting?  |
-| | *Enter your response here...* |
+| | 
+```
+//add days
+moment().add(1, 'days').calendar();  
+//substract days
+moment().subtract(1, 'days').calendar(); 
+//format
+moment().format('MMMM Do YYYY, h:mm:ss a');
+```
+ |
 |Question | When and how do we **get rid of inactive players**?  |
 | | We get rid of inactive players as soon as they are inactive. To detect that musician are inactive, we compare the timestamps between the saved value and the current time stamp, if it's greater then 5 second, we get rid of the musician |
 |Question | How do I implement a **simple TCP server** in Node.js?  |
-| | *Enter your response here...* |
+| | using net.Server library
+```
+var net = require('net');
+var server = net.createServer(function(socket) {
+	socket.write('Echo server\r\n');
+	socket.pipe(socket);
+});
+server.listen(1337, '127.0.0.1');
+```
+|
 
 
 ## Task 5: package the "auditor" app in a Docker image
